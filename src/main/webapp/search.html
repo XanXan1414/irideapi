@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+	<div class="container" style="padding-top:40px;">
+	<div ng-show="showSearch">
+		<table class="table table-hover table-bordered">
+			<tr>
+				<td colspan="1" class='text-center'>
+					<h2>Arkansas Ride Maps</h2>
+				</td>
+				
+				<td colspan="1" class='text-center'>
+					<span id="search">Search</span>
+					<input type="text" maxlength="15" ng-model="searchValue">
+				</td>
+				
+				<td colspan="1" class="text-center">
+					<button type="button" ng-click="getRides()" 
+						class="btn btn-success"> <span class="glyphicon glyphicon-refresh"></span>
+						Refresh Rides
+					</button>
+				</td>
+			</tr>
+			<tr class ="heading">
+				<th class="text-center col-sm-4">Ride</th>
+				<th class="text-center col-sm-4">Map Link</th>
+				<th class="text-center col-sm-4">image</th>
+			</tr>
+			<tr ng-repeat="ride in rides| filter : searchValue" >
+				<td class="col-sm-4">{{ride.name}}</td>
+				<td class="col-sm-4 text-center"><a href="{{ride.mapURL}}">Google Maps link</a></td>
+				<td class="col-sm-4 text-center"><img src ="{{ride.imageURL}}"></td>
+			</tr>
+			<tr>
+							
+				<td colspan="12" class='text-left success'>
+					<h4>select a ride</h4>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+	
+	
+	
+</body>
+</html>

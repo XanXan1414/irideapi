@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container-fluid">
+
+<h2>Sign up for our monthly news letter!</h2>
+<p>Get the latest ride maps and stay up to date on events happening right here in Arkansas
+<div class="header">
+		<button type="button" ng-click="subscribe()" 
+		ng-disabled="isEmailCustomersDisabled"
+			class="btn btn-success"> <span class="glyphicon glyphicon-edit"></span>Submit</button>						
+		<p> <span class="status" ng-bind="emailAddressStatus"></span></p>		
+	</div>
+	<table class="table-bordered">
+		<tr>
+			<td>
+				<label>Email Address:</label><br>
+				<input
+					type="text" required ng-model="address"
+					ng-minlength="5" ng-maxlength="60"/>				
+			</td>
+		</tr>
+	</table>
+
+</div>
+</body>
+</html>

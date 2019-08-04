@@ -1,0 +1,71 @@
+@CHARSET "ISO-8859-1";
+ 
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 675px;
+        width: 100%;
+      }
+      iframe {
+  width:300px;
+  height:300px;
+  position:absolute;
+  border:solid 1px #000;
+}
+#front {
+  position:absolute;
+  border:solid 1px #000;
+  width:200px;
+  height:200px;
+  right:110px;
+  top:60px;
+  background:#f00;
+  box-shadow:0 0 10px #666;
+  
+}
+  
+
+/* Optional: Makes the sample page fill the window. */
+body {
+	background-image:
+		url("https://i0.wp.com/fancycrave.com/wp-content/uploads/2019/03/Close-up-Shot-of-a-Vintage-Motorcycle-Wheel.jpg?resize=900%2C600&ssl=1");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: rgba(255, 255, 255, 0.7);
+	background-blend-mode: lighten;
+	
+	font-family:"courier";
+}
+
+table, tr, td {
+	border-style: solid;
+	border-width: 4px;
+	font-size: 30px;
+	background-color:white;
+	
+}
+.heading {
+	background-color:#9FBD89;
+}
+
+.small-table {
+	width:50%;
+}
+
+#search {
+	font-size:18px;
+}
+
+.status {
+	background-color: green;
+	color:black;
+	text-align:left;
+	font-size:18px;
+}
+
+img {
+	width:300px;
+	heigth:100px;
+}

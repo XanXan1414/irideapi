@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IrideAR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+		<script src="js/ride.js"></script>
+<link rel="stylesheet" type="text/css" href="ride.css">
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfkOmzXCKy3r8wOhFd-3ajiR4ozz8Oiqo">
+    </script>
+	
+
+</head>
+<body ng-app="irideapp" ng-controller="ridecontroller">
+	
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<ul class="nav navbar-nav">
+				<li><a href="#!ride">IrideAR</a></li>
+				<li><a href="#!map">Map</a></li>
+				<li><a href="#!search">Ride maps</a></li>
+				<li><a href="#!events">Events</a></li>
+				<li><a href="#!signup">Sign up</a></li>
+			</ul>
+			<div class="nav navbar-nav navbar-right"
+				style="padding-right: 20px; padding-top: 10px;">
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button"
+						data-toggle="dropdown">
+						Admin <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a href="#!create">Create map</a></li>
+						<li><a href="#!updateDelete">Update / delete</a></li>
+						<li ng-click="getRides()"><a href="#!email">Push email</a></li>
+						<li><a href="#!resume">Resume</a></li>
+						<li><a href="#!stack">Stack</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+       
+       
+       
+		<br> <br> <br>
+		<div ng-view></div>
+	
+	
+</body>
+</html>

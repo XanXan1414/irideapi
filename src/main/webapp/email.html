@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="container-fluid">			
+	
+	<h5>Please enter email subject and message.</h5>
+	<h5>Press 'Publish' to email customers.  Press 'Clear' to clear input.</h5>						
+		
+	<div class="header">
+		<button type="button" ng-click="emailCustomers()" 
+		ng-disabled="isEmailCustomersDisabled"
+			class="btn btn-success"> <span class="glyphicon glyphicon-edit"></span>Publish</button>	
+		<button type="button" ng-click="emailCustomersClear()" 						
+			class="btn btn-warning"> <span class="glyphicon"></span>Clear</button>					
+		<p> <span class="status" ng-bind="emailStatus"></span></p>		
+	</div>
+
+	<table class="table-bordered">
+		<tr>
+			<td>
+				<label>Subject:</label><br>
+				<input
+					type="text" required ng-model="emailSubject"
+					ng-minlength="5" ng-maxlength="40"/>				
+			</td>
+		</tr>
+		<tr>
+			<td><label>Content:</label><br>
+			 	<textarea
+					type="text" required ng-model="emailText"
+					ng-minlength="10" ng-maxlength="400"
+					rows="10" cols="50">
+				</textarea>				
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
